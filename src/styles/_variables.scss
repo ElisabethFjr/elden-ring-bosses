@@ -1,0 +1,15 @@
+// COLORS
+$color-primary: #59231E;
+$color-primary-lightest: lighten($color-primary, 20%);
+$color-primary-darkest: darken($color-primary, 8%);
+$color-gold: #bf9a54c7;
+$color-background: #402424;
+$color-text: #CCC1B7;
+
+:export {
+    colorPrimary: $color-primary;
+    colorPrimaryLightest: $color-primary-lightest;
+    colorPrimaryDarkest: $color-primary-darkest;
+    colorGold: $color-gold;
+    colorBackground: $color-background;
+}

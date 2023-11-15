@@ -1,13 +1,12 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import React from 'react';
+import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ['latin'] })
+import '../styles/globals.scss';
 
 export const metadata: Metadata = {
   title: 'Elden Ring Bosses',
   description: 'All bosses from the Elden Ring Video Game.',
-}
+};
 
 export default function RootLayout({
   children,
@@ -16,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
-  )
+  );
 }

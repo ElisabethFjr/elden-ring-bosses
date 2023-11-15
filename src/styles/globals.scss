@@ -1,0 +1,26 @@
+@use 'reset';
+@use 'fonts';
+@use 'variables' as v;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-family: 'EB Garamond';
+  color: v.$color-text;
+  overflow-x: hidden;
+  background: rgb(35,34,35);
+  background: linear-gradient(198deg, rgba(35,34,35,1) 0%, rgba(41,40,40,1) 49%, rgba(21,22,22,1) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
