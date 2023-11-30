@@ -1,6 +1,28 @@
-import "./page.scss";
+import axiosInstance from '@/utils/axios';
 
-export default function Home() {
+import { Boss } from '@/@types';
+import './page.scss';
+
+const getAllBosses = async () => {
+  try {
+    console.log(await axiosInstance.get('/bosses'));
+    const { data } = await axiosInstance.get('/bosses');
+    return data.data;
+  } catch (error) {
+    console.error('Failed fetching bosses:', error);
+    throw new Error();
+  }
+};
+
+export default async function Home() {
+  const bosses = await getAllBosses();
+
+  const bossesList = bosses.map((boss: Boss) => (
+    <li className="bosses-list-item" key={boss.id}>
+      {boss.name}
+    </li>
+  ));
+
   return (
     <main className="main">
       <section className="home">
@@ -20,7 +42,9 @@ export default function Home() {
         </div>
       </section>
       <section className="bosses">
-        <div className="bosses-list" />
+        <div className="bosses-list">
+          <ul>{bossesList}</ul>
+        </div>
       </section>
     </main>
   );
