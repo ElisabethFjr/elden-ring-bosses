@@ -5,8 +5,7 @@ import './page.scss';
 
 const getAllBosses = async () => {
   try {
-    console.log(await axiosInstance.get('/bosses'));
-    const { data } = await axiosInstance.get('/bosses');
+    const { data } = await axiosInstance.get('/bosses?limit=106');
     return data.data;
   } catch (error) {
     console.error('Failed fetching bosses:', error);
