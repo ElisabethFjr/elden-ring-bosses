@@ -1,11 +1,18 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
-
 const path = require('path');
 
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src/styles')],
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'eldenring.fanapis.com',
+        pathname: '/images/bosses/**',
+      },
+    ],
   },
 };
 

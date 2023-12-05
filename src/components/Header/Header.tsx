@@ -1,21 +1,21 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import './Header.scss';
+import styles from './Header.module.scss';
 
 function Header() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <div>
-        <nav className="header-navbar">
-          <ul className="header-navbar-list">
-            <li className="header-navbar-list-elem">Home</li>
-            <li className="header-navbar-list-elem">Bosses</li>
-            <li className="header-navbar-list-elem">About</li>
+        <nav className={styles.navbar}>
+          <ul className={styles.list}>
+            <li className={styles.elem}>Home</li>
+            <li className={styles.elem}>Bosses</li>
+            <li className={styles.elem}>About</li>
           </ul>
         </nav>
       </div>
-      <button className="header-btn" type="button">
-        <FontAwesomeIcon className="header-btn-icon" icon={faMagnifyingGlass} />
+      <button className={styles.btn} type="button">
+        <FontAwesomeIcon className={styles.icon} icon={faMagnifyingGlass} />
       </button>
     </header>
   );

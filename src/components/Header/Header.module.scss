@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@import 'variables';
 
 .header {
   position: fixed;
@@ -11,15 +11,16 @@
   text-transform: uppercase;
   font-size: 1.1rem;
 
-  &-navbar {
+  .navbar {
     padding-right: 3rem;
-    &-list {
+
+    .list {
       display: flex;
       gap: 3rem;
     }
   }
 
-  &-btn {
+  .btn {
     background-color: transparent;
     border: none;
     color: $colorText;

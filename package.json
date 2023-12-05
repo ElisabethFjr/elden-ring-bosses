@@ -16,7 +16,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.2",
+    "nanoid": "^5.0.4",
     "next": "14.0.2",
+    "next-images": "^1.8.5",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.69.5"
