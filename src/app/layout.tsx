@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
+// eslint-disable-next-line camelcase
+import { EB_Garamond } from 'next/font/google';
 
 // Import Components
 import Header from '@/components/Header/Header';
@@ -7,6 +9,8 @@ import Header from '@/components/Header/Header';
 // Import Styles
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/globals.scss';
+
+const EBGaramond = EB_Garamond({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Elden Ring Bosses',
@@ -21,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={EBGaramond.className}>
         <Header />
         <main>{children}</main>
       </body>
