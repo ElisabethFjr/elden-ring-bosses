@@ -6,6 +6,7 @@
   height: 100vh;
   background-image: url('/images/home.png');
   background-position: center;
+  background-attachment: fixed;
 
   .container {
     max-width: 550px;
@@ -57,6 +58,16 @@
 
 // ***Bosses Page***
 .bosses {
+  padding: 5rem 0;
+  background: rgb(35, 34, 35);
+  background: linear-gradient(
+    -17deg,
+    rgb(19, 15, 13) 0%,
+    rgb(17, 14, 14) 49%,
+    rgba(1, 1, 1, 1) 100%
+  );
+  .container {
+  }
 }
 
 /* Mobile */

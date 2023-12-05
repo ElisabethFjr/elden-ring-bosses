@@ -11,14 +11,6 @@ html,
 body {
   max-width: 100vw;
   color: $colorText;
-  overflow-x: hidden;
-  background: rgb(35, 34, 35);
-  background: linear-gradient(
-    198deg,
-    rgba(35, 34, 35, 1) 0%,
-    rgba(41, 40, 40, 1) 49%,
-    rgba(21, 22, 22, 1) 100%
-  );
 }
 
 a {
@@ -29,4 +21,17 @@ a {
 
 button {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $colorBorder;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $colorGold;
+  border-radius: 0.4rem;
 }
