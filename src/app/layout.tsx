@@ -1,6 +1,11 @@
 import React from 'react';
 import type { Metadata } from 'next';
 
+// Import Components
+import Header from '@/components/Header/Header';
+
+// Import Styles
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import '../styles/globals.scss';
 
 export const metadata: Metadata = {
@@ -16,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Header />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

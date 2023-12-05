@@ -1,6 +1,7 @@
 import axiosInstance from '@/utils/axios';
 
 import { Boss } from '@/@types';
+
 import './page.scss';
 
 const getAllBosses = async () => {
@@ -13,7 +14,7 @@ const getAllBosses = async () => {
   }
 };
 
-export default async function Home() {
+async function Home() {
   const bosses = await getAllBosses();
 
   const bossesList = bosses.map((boss: Boss) => (
@@ -23,7 +24,7 @@ export default async function Home() {
   ));
 
   return (
-    <main className="main">
+    <>
       <section className="home">
         <div className="home-container">
           <h1 className="home-title">
@@ -45,6 +46,8 @@ export default async function Home() {
           <ul>{bossesList}</ul>
         </div>
       </section>
-    </main>
+    </>
   );
 }
+
+export default Home;

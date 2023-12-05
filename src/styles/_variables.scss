@@ -1,16 +1,8 @@
 // COLORS
-$color-primary: #59231E;
-$color-primary-lightest: lighten($color-primary, 20%);
-$color-primary-darkest: darken($color-primary, 8%);
-$color-gold: #c09a54c7;
-$color-background: #402424;
-$color-text: #CCC1B7;
-$color-border:#787771;
-
-:export {
-    colorPrimary: $color-primary;
-    colorPrimaryLightest: $color-primary-lightest;
-    colorPrimaryDarkest: $color-primary-darkest;
-    colorGold: $color-gold;
-    colorBackground: $color-background;
-}
+$colorPrimary: #59231e;
+$colorPrimaryLightest: lighten($colorPrimary, 20%);
+$colorPrimaryDarkest: darken($colorPrimary, 8%);
+$colorGold: #c09a54c7;
+$colorBackground: #402424;
+$colorText: #ccc1b7;
+$colorBorder: #787771;
