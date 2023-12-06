@@ -4,24 +4,28 @@ import Link from 'next/link';
 import styles from './BossCard.module.scss';
 
 export interface BossCardProps {
-  id: number;
-  //   name: string;
-  //   image: string;
-  //   region: string;
-  //   description: string;
-  //   location: string;
+  id: string;
+  name: string;
+  // image: string;
+  description: string;
+  location: string;
+  healthPoints: string;
   //   drops: string[];
-  //   healthPoints: string;
 }
 
-function BossCard({ id }: BossCardProps) {
+function BossCard({
+  id,
+  name,
+  // image,
+  description,
+  location,
+  healthPoints,
+}: BossCardProps) {
   // const allDrops = drops.map((drop) => (
   //   <li className="boss-card-drops-item" key={nanoid()}>
   //     {drop}
   //   </li>
   // ));
-
-  // // console.log(allDrops);
 
   return (
     <Link href={`/bosses/${id}`}>
@@ -29,19 +33,16 @@ function BossCard({ id }: BossCardProps) {
         <div className={styles.image}>
           <Image
             src="https://eldenring.fanapis.com/images/bosses/17f696d979al0i1v1775oof02bi8oh.png"
-            alt="Rykard"
+            alt={name}
             fill
           />
         </div>
         <div className={styles.content}>
-          <h2 className={styles.name}>Rykard, Lord Of Blasphemy</h2>
-          <p className={styles.description}>
-            Join the Serpent King, as family... Together, we will devour the
-            very gods!
-          </p>
-          <p className={styles.location}>Mt. Gelmir</p>
+          <h2 className={styles.name}>{name}</h2>
+          <p className={styles.description}>{description}</p>
+          <p className={styles.location}>Location : {location}</p>
           {/* <ul className="boss-card-drops">Drops</ul> */}
-          <p className={styles.healthpoints}>1000000</p>
+          <p className={styles.healthpoints}>HP {healthPoints}</p>
         </div>
       </article>
     </Link>
