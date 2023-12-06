@@ -4,6 +4,7 @@ import styles from './BossesPage.module.scss';
 function BossesPage() {
   return (
     <div className={styles.bosses}>
+      <h1>All Bosses</h1>
       <BossCard />
     </div>
   );
