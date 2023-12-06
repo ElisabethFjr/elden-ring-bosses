@@ -2,9 +2,19 @@
 $colorPrimary: #59231e;
 $colorPrimaryLightest: lighten($colorPrimary, 20%);
 $colorPrimaryDarkest: darken($colorPrimary, 8%);
-$colorGold: #ab966f;
+$colorGold: rgb(170, 149, 110);
 $colorBackground: #232223;
 $colorBtnTransparent: rgb(36, 35, 36, 0.6);
 $colorHeader: rgb(0, 0, 0, 0.6);
 $colorText: #ccc1b7;
 $colorBorder: #787771;
+
+// HOVER SHADOW
+
+$hoverShadow:
+  0 0 10px #ccc1b7,
+  0 0 20px #ccc1b7,
+  0 0 40px #ccc1b7,
+  0 0 80px #ccc1b7,
+  0 0 120px #ccc1b7,
+  0 0 160px #ccc1b7;
