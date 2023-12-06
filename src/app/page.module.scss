@@ -2,21 +2,13 @@
 
 // ***Home Page***
 .home {
-  width: 100%;
-  height: 100vh;
-  background-image: url('/images/home.png');
-  background-position: center;
-  background-attachment: fixed;
-
-  .container {
-    max-width: 550px;
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5rem;
-  }
+  max-width: 550px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5rem;
 
   .title {
     display: flex;
@@ -34,39 +26,6 @@
     padding-bottom: 2rem;
     font-size: 1.3rem;
     font-weight: 400;
-  }
-
-  .btn {
-    width: 50%;
-    padding: 0.5rem;
-    border: 1px solid $colorBorder;
-    background-color: transparent;
-    box-shadow:
-      inset 0 0 0 0 transparent,
-      0 0 0 0 transparent;
-    color: $colorText;
-    text-transform: uppercase;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      box-shadow:
-        inset 0 0 18px 0 rgba(255, 223, 77, 0.4),
-        0 0 9px 3px rgba(255, 223, 77, 0.1);
-    }
-  }
-}
-
-// ***Bosses Page***
-.bosses {
-  padding: 5rem 0;
-  background: rgb(35, 34, 35);
-  background: linear-gradient(
-    -17deg,
-    rgb(19, 15, 13) 0%,
-    rgb(17, 14, 14) 49%,
-    rgba(1, 1, 1, 1) 100%
-  );
-  .container {
   }
 }
 

@@ -6,6 +6,7 @@ import { Boss } from '@/@types';
 import BossCard from '@/components/BossCard/BossCard';
 // Import Styles
 import styles from './page.module.scss';
+import Button from '@/components/Button/Button';
 
 // const getAllBosses = async () => {
 //   try {
@@ -34,29 +35,18 @@ async function Home() {
   // ));
 
   return (
-    <>
-      <section className={styles.home}>
-        <div className={styles.container}>
-          <h1 className={styles.title}>
-            <span className={styles.maj}>E</span>
-            lden Rin
-            <span className={styles.maj}>g</span>
-          </h1>
-          <h2 className={styles.subtitle}>
-            Journey through the Lands Between and discover all bosses from the
-            renowned FromSoftware&apos;s video game.
-          </h2>
-          <button className={styles.btn} type="button">
-            All Bosses
-          </button>
-        </div>
-      </section>
-      <section className={styles.bosses}>
-        <div className={styles.container}>
-          <BossCard />
-        </div>
-      </section>
-    </>
+    <div className={styles.home}>
+      <h1 className={styles.title}>
+        <span className={styles.maj}>E</span>
+        lden Rin
+        <span className={styles.maj}>g</span>
+      </h1>
+      <h2 className={styles.subtitle}>
+        Journey through the Lands Between and discover all bosses from the
+        renowned FromSoftware&apos;s video game.
+      </h2>
+      <Button text="All Bosses" />
+    </div>
   );
 }
 

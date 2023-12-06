@@ -10,8 +10,15 @@
   min-width: 220px;
   height: 450px;
   margin: auto;
+  background: rgb(35, 34, 35);
+  background: linear-gradient(
+    -17deg,
+    rgb(19, 15, 13) 0%,
+    rgb(17, 14, 14) 49%,
+    rgba(1, 1, 1, 1) 100%
+  );
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid $colorGold;
+  border: 1px solid $colorBorder;
   .image {
     position: relative;
     width: 100%;

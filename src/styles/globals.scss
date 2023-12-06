@@ -23,6 +23,7 @@ button {
   cursor: pointer;
 }
 
+// ***Scroll Bar***
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -34,4 +35,34 @@ button {
 ::-webkit-scrollbar-thumb {
   background-color: $colorGold;
   border-radius: 0.4rem;
+}
+
+// ***MAIN***
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/home.png');
+  background-position: center;
+  background-attachment: fixed;
+}
+
+// ***ERROR Page***
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 400px;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+
+  &-text {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+  }
 }

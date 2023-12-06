@@ -32,7 +32,6 @@ function BossCard() {
       </div>
       <div className={styles.content}>
         <h2 className={styles.name}>Rykard, Lord Of Blasphemy</h2>
-        <p className={styles.region}>Mount Gelmir</p>
         <p className={styles.description}>
           Join the Serpent King, as family... Together, we will devour the very
           gods!

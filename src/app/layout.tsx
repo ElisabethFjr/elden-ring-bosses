@@ -27,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={EBGaramond.className}>
         <Header />
-        <main>{children}</main>
+        <main className="main">{children}</main>
       </body>
     </html>
   );
