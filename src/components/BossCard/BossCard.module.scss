@@ -7,10 +7,9 @@
   align-items: center;
   justify-content: start;
   width: 20%;
-  min-width: 220px;
+  min-width: 280px;
   height: 450px;
   margin: auto;
-  background: rgb(35, 34, 35);
   background: linear-gradient(
     -17deg,
     rgb(19, 15, 13) 0%,
@@ -22,7 +21,7 @@
   .image {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 220px;
   }
   .content {
     padding: 1rem;

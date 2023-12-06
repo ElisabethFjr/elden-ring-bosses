@@ -1,12 +1,14 @@
 @import 'variables';
 
 .bosses {
-  padding: 5rem 0;
-  // background: rgb(35, 34, 35);
-  // background: linear-gradient(
-  //   -17deg,
-  //   rgb(19, 15, 13) 0%,
-  //   rgb(17, 14, 14) 49%,
-  //   rgba(1, 1, 1, 1) 100%
-  // );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  width: 90%;
+  height: 100%;
+  margin-top: 4.5rem;
+  margin: 4.5rem auto 0 auto;
+  padding: 3rem 0;
 }

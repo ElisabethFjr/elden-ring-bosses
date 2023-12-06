@@ -5,6 +5,7 @@ import { EB_Garamond } from 'next/font/google';
 
 // Import Components
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 // Import Styles
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={EBGaramond.className}>
         <Header />
         <main className="main">{children}</main>
+        <Footer />
       </body>
     </html>
   );
