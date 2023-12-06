@@ -1,5 +1,5 @@
 // COLORS
-$colorPrimary: #59231e;
+$colorPrimary: #3b302d;
 $colorPrimaryLightest: lighten($colorPrimary, 20%);
 $colorPrimaryDarkest: darken($colorPrimary, 8%);
 $colorGold: #aa956e;
@@ -10,7 +10,6 @@ $colorText: #ccc1b7;
 $colorBorder: #787771;
 
 // HOVER SHADOW
-
 $hoverShadow:
   0 0 10px #ccc1b7,
   0 0 20px #ccc1b7,

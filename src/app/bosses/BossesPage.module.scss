@@ -9,7 +9,31 @@
   width: 90%;
   min-height: 100%;
   margin: 4.5rem auto 0 auto;
-  padding: 3rem 0;
+
+  .title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $colorPrimary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1.6px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        $colorGold,
+        transparent
+      );
+    }
+  }
 
   .list {
     display: grid;

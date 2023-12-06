@@ -19,6 +19,8 @@ async function BossesPage() {
 
   const bosses = await getAllBosses();
 
+  console.log(bosses);
+
   const allBosses = bosses.map((boss: Boss) => (
     <li className={styles.item} key={boss.id}>
       <BossCard
@@ -35,7 +37,7 @@ async function BossesPage() {
 
   return (
     <div className={styles.bosses}>
-      <h1>All Bosses</h1>
+      <h1 className={styles.title}>All Bosses</h1>
       <ul className={styles.list}>{allBosses}</ul>
     </div>
   );
