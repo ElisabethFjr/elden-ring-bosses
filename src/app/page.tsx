@@ -15,7 +15,7 @@ async function Home() {
         Journey through the Lands Between and discover all bosses from the
         renowned FromSoftware&apos;s video game.
       </h2>
-      <Button text="All Bosses" />
+      <Button text="All Bosses" href="/bosses" />
     </div>
   );
 }

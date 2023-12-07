@@ -1,15 +1,19 @@
 'use client';
 
-import Button from '@/components/Button/Button';
+export interface ErrorProps {
+  reset: () => void;
+}
 
-function Error() {
+function Error({ reset }: ErrorProps) {
   return (
     <div className="error">
       <h1 className="error-title">Error</h1>
       <p className="error-text">
-        Whooops, an error has occurred. Please try again later.
+        Whooops, an error has occurred. Please try again.
       </p>
-      <Button text="Back" />
+      <button type="button" onClick={() => reset()}>
+        Try again
+      </button>
     </div>
   );
 }
