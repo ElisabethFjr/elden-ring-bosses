@@ -8,6 +8,8 @@ export interface BossCardProps {
 }
 
 function BossCard({ boss }: BossCardProps) {
+  console.log(boss.image);
+
   return (
     <Link href={`/bosses/${boss.id}`}>
       <article className={styles.card}>
@@ -21,8 +23,6 @@ function BossCard({ boss }: BossCardProps) {
         <div className={styles.content}>
           <h2 className={styles.name}>{boss.name}</h2>
           <p className={styles.description}>{boss.description}</p>
-          <p className={styles.location}>Location : {boss.location}</p>
-          <p className={styles.healthpoints}>HP {boss.healthPoints}</p>
         </div>
         <div className={styles.overlay}>
           <button type="button" className={styles.btn}>

@@ -3,12 +3,12 @@ $colorPrimary: #3b302d;
 $colorPrimaryLightest: lighten($colorPrimary, 20%);
 $colorPrimaryDarkest: darken($colorPrimary, 8%);
 $colorGold: #aa956e;
-$colorBackground: #232223;
-$colorBtnTransparent: rgb(36, 35, 36, 0.6);
-$colorHeader: rgb(0, 0, 0, 0.6);
 $colorText: #ccc1b7;
 $colorBorder: #787771;
-$colorHoverCard: rgb(0, 0, 0, 0.9);
+$colorBtnTransparent: rgb(36, 35, 36, 0.6);
+$colorHeader: rgb(0, 0, 0, 0.6);
+$colorCardHover: rgb(0, 0, 0, 0.9);
+$colorCardBackground: rgba(36, 35, 36, 0.3);
 
 // HOVER SHADOW
 $hoverShadow:

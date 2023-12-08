@@ -1,7 +1,7 @@
 export interface Boss {
   id: string;
   name: string;
-  image: string;
+  image: string | null;
   description: string;
   location: string;
   drops: [];
