@@ -8,21 +8,24 @@ export interface BossCardProps {
 }
 
 function BossCard({ boss }: BossCardProps) {
-  console.log(boss.image);
+  const imageURL = boss.image
+    ? `${boss.image}`
+    : 'public/images/elden-ring.webp';
 
   return (
     <Link href={`/bosses/${boss.id}`}>
       <article className={styles.card}>
         <div className={styles.image}>
           <Image
-            src="https://eldenring.fanapis.com/images/bosses/17f696d979al0i1v1775oof02bi8oh.png"
+            src={imageURL}
             alt={boss.name}
-            fill
+            width={300}
+            height={170}
+            style={{ objectFit: 'cover', objectPosition: 'top' }}
           />
         </div>
         <div className={styles.content}>
           <h2 className={styles.name}>{boss.name}</h2>
-          <p className={styles.description}>{boss.description}</p>
         </div>
         <div className={styles.overlay}>
           <button type="button" className={styles.btn}>

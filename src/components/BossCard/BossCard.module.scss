@@ -8,9 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 20%;
-  min-width: 280px;
-  height: 430px;
+  width: 300px;
+  height: 240px;
   margin: auto;
   background-color: $colorCardBackground;
   backdrop-filter: blur(10px);
@@ -38,39 +37,28 @@
 
   .image {
     position: relative;
-    width: 100%;
-    height: 220px;
+    object-fit: cover;
+    object-position: center;
   }
 
   .content {
-    .description {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: normal;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+      @include goldLine;
+      top: 0;
     }
     .name {
-      position: relative;
       text-align: center;
-      padding: 0.5rem;
-      font-size: 1.4rem;
-      font-weight: 600;
-      &::after {
-        @include goldLine;
-        top: 0;
-      }
-      &::before {
-        @include goldLine;
-        bottom: 0;
-      }
-    }
-    .description {
-      margin-top: 1rem;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: $colorGold;
     }
   }
 

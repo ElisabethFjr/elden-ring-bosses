@@ -9,7 +9,7 @@ import styles from './BossesPage.module.scss';
 async function BossesPage() {
   const getAllBosses = async () => {
     try {
-      const { data } = await axiosInstance.get('/bosses?limit=20&page=1');
+      const { data } = await axiosInstance.get('/bosses?limit=9&page=1');
       return data.data;
     } catch (error) {
       console.error('Failed fetching bosses:', error);
@@ -18,6 +18,7 @@ async function BossesPage() {
   };
 
   const bosses = await getAllBosses();
+  console.log(bosses);
 
   const allBosses = bosses.map((boss: Boss) => (
     <li className={styles.item} key={boss.id}>
@@ -27,7 +28,7 @@ async function BossesPage() {
 
   return (
     <div className={styles.bosses}>
-      <h1 className={styles.title}>All Bosses</h1>
+      <h1 className={styles.title}>Bosses Wiki</h1>
       <ul className={styles.list}>{allBosses}</ul>
     </div>
   );
