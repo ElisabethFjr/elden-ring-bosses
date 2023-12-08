@@ -1,48 +1,33 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import { nanoid } from 'nanoid';
+import { Boss } from '@/@types';
 import styles from './BossCard.module.scss';
 
 export interface BossCardProps {
-  id: string;
-  name: string;
-  // image: string;
-  description: string;
-  location: string;
-  healthPoints: string;
-  //   drops: string[];
+  boss: Boss;
 }
 
-function BossCard({
-  id,
-  name,
-  // image,
-  description,
-  location,
-  healthPoints,
-}: BossCardProps) {
-  // const allDrops = drops.map((drop) => (
-  //   <li className="boss-card-drops-item" key={nanoid()}>
-  //     {drop}
-  //   </li>
-  // ));
-
+function BossCard({ boss }: BossCardProps) {
   return (
-    <Link href={`/bosses/${id}`}>
+    <Link href={`/bosses/${boss.id}`}>
       <article className={styles.card}>
         <div className={styles.image}>
           <Image
             src="https://eldenring.fanapis.com/images/bosses/17f696d979al0i1v1775oof02bi8oh.png"
-            alt={name}
+            alt={boss.name}
             fill
           />
         </div>
         <div className={styles.content}>
-          <h2 className={styles.name}>{name}</h2>
-          <p className={styles.description}>{description}</p>
-          <p className={styles.location}>Location : {location}</p>
-          {/* <ul className="boss-card-drops">Drops</ul> */}
-          <p className={styles.healthpoints}>HP {healthPoints}</p>
+          <h2 className={styles.name}>{boss.name}</h2>
+          <p className={styles.description}>{boss.description}</p>
+          <p className={styles.location}>Location : {boss.location}</p>
+          <p className={styles.healthpoints}>HP {boss.healthPoints}</p>
+        </div>
+        <div className={styles.overlay}>
+          <button type="button" className={styles.btn}>
+            See More
+          </button>
         </div>
       </article>
     </Link>
