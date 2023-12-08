@@ -28,7 +28,12 @@ async function BossesPage() {
 
   return (
     <div className={styles.bosses}>
-      <h1 className={styles.title}>Bosses Wiki</h1>
+      <h1 className={styles.title}>
+        <span className={styles.maj}>E</span>
+        lden Rin
+        <span className={styles.maj}>g</span>
+      </h1>
+      <h2 className={styles.subtitle}>Bosses</h2>
       <ul className={styles.list}>{allBosses}</ul>
     </div>
   );

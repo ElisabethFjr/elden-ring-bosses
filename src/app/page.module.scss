@@ -17,6 +17,7 @@
     font-weight: 500;
     text-transform: uppercase;
     color: $colorGold;
+    text-shadow: 2px 2px 4px $colorBtnTransparent;
     .maj {
       font-size: 5rem;
     }
@@ -26,6 +27,7 @@
     padding-bottom: 2rem;
     font-size: 1.3rem;
     font-weight: 400;
+    text-shadow: 2px 2px 4px $colorBtnTransparent;
   }
 }
 

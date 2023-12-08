@@ -11,13 +11,44 @@
   margin: 4.5rem auto 0 auto;
 
   .title {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $colorGold;
+    text-shadow: 2px 2px 4px $colorBtnTransparent;
+    .maj {
+      font-size: 4rem;
+    }
+  }
+
+  .subtitle {
     position: relative;
     display: inline-block;
-    padding-bottom: 0.5rem;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 400;
     color: $colorText;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 95px;
+      width: 90px;
+      height: 2px;
+      background: linear-gradient(to right, $colorGold, transparent);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 95px;
+      width: 90px;
+      height: 1.6px;
+      background: linear-gradient(to left, $colorGold, transparent);
+    }
   }
 
   .list {
