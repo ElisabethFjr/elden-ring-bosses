@@ -2,7 +2,9 @@ import axiosInstance from '@/utils/axios';
 
 async function GET(req, res) {
   try {
+    // Extract the search parameters from the URL request
     const { searchParams } = new URL(req.url);
+    // Get the 'name' parameter from the search parameters
     const searchTerm = searchParams.get('name')?.toLowerCase() || '';
     const results = await axiosInstance.get('/bosses', {
       params: {

@@ -1,7 +1,10 @@
+// Import Next.js Components
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './BossesSearchResults.module.scss';
+// Import Types
 import { Boss } from '@/@types';
+// Import Styles
+import styles from './BossesSearchResults.module.scss';
 
 interface BossesSearchResultsProps {
   searchResults: Boss[];

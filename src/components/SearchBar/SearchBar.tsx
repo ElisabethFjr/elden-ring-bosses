@@ -1,13 +1,20 @@
 'use client';
 
-import DOMPurify from 'dompurify';
+// Import React Hooks
 import { ChangeEvent, useState } from 'react';
+// Import Third-Party Modules
+import DOMPurify from 'dompurify';
 import { DebounceInput } from 'react-debounce-input';
+// Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+// Import Utils
 import axiosInstance from '@/utils/axios';
+// Import Types
 import { Boss } from '@/@types';
+// Import Components
 import BossesSearchResults from './BossesSearchResults/BossesSearchResults';
+// Import Styles
 import styles from './SearchBar.module.scss';
 
 function SearchBar() {
@@ -16,11 +23,14 @@ function SearchBar() {
 
   const searchBosses = async (query: string) => {
     try {
+      // If input empty or contains whitespaces, reset all results
       if (!query.trim()) {
-        setSearchResults([]); // Reset Results
+        setSearchResults([]);
         return;
       }
+      // Fetch all Bosses depending on query name
       const { data } = await axiosInstance.get(`/bosses?name=${query}`);
+      // Update search results with data
       setSearchResults(data.data);
     } catch (error) {
       console.error('Failed fetching bosses:', error);
@@ -28,6 +38,7 @@ function SearchBar() {
     }
   };
 
+  // Handler for input change events
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const sanitizedValue = DOMPurify.sanitize(event.target.value);
     searchBosses(sanitizedValue);
