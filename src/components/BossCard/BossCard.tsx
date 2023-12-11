@@ -8,16 +8,12 @@ export interface BossCardProps {
 }
 
 function BossCard({ boss }: BossCardProps) {
-  const imageURL = boss.image
-    ? `${boss.image}`
-    : 'public/images/elden-ring.webp';
-
   return (
     <Link href={`/bosses/${boss.id}`}>
       <article className={styles.card}>
         <div className={styles.image}>
           <Image
-            src={imageURL}
+            src={boss.image ? `${boss.image}` : '/images/default-image.webp'}
             alt={boss.name}
             width={300}
             height={170}
