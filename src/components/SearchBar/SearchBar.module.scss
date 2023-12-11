@@ -1,0 +1,49 @@
+@import 'variables';
+
+.searchBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 3rem;
+
+  .btn {
+    position: absolute;
+    left: 0.5rem;
+    background: none;
+    border: none;
+    color: $colorText;
+    transition: all 0.3s ease-in-out;
+    &.gold {
+      color: $colorGold;
+    }
+    &:hover {
+      color: $colorGold;
+      text-shadow: $hoverShadow;
+    }
+  }
+
+  .input {
+    width: 100%;
+    background-color: rgb(204, 193, 183, 0.2);
+    padding: 0.5rem 2.5rem;
+    border: 1px solid transparent;
+    color: $colorText;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+    &::placeholder {
+      text-transform: none;
+    }
+    &:focus {
+      outline: none;
+      border: 1px solid $colorGold;
+      background-color: $colorBtnTransparent;
+      box-shadow: 0 0 5px rgba($colorGold, 0.5);
+    }
+    &:focus-within {
+      + .btn {
+        color: $colorGold;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import axiosInstance from '@/utils/axios';
 // Import Types
 import { Boss } from '@/@types';
 // Import Components
+import SearchBar from '@/components/SearchBar/SearchBar';
 import BossCard from '@/components/BossCard/BossCard';
 import styles from './BossesPage.module.scss';
 
@@ -18,7 +19,6 @@ async function BossesPage() {
   };
 
   const bosses = await getAllBosses();
-  console.log(bosses);
 
   const allBosses = bosses.map((boss: Boss) => (
     <li className={styles.item} key={boss.id}>
@@ -34,6 +34,7 @@ async function BossesPage() {
         <span className={styles.maj}>g</span>
       </h1>
       <h2 className={styles.subtitle}>Bosses</h2>
+      <SearchBar />
       <ul className={styles.list}>{allBosses}</ul>
     </div>
   );

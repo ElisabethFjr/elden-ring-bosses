@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import styles from './Header.module.scss';
 
 function Header() {
@@ -21,9 +19,6 @@ function Header() {
           </ul>
         </nav>
       </div>
-      <button className={styles.btn} type="button">
-        <FontAwesomeIcon className={styles.icon} icon={faMagnifyingGlass} />
-      </button>
     </header>
   );
 }
