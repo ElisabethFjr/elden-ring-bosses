@@ -13,7 +13,7 @@ interface BossesSearchResultsProps {
 function BossesSearchResults({ searchResults }: BossesSearchResultsProps) {
   return (
     <ul className={styles.list}>
-      {searchResults.map((boss) => (
+      {searchResults.slice(0, 10).map((boss) => (
         <li key={boss.id}>
           <Link
             className={styles.item}
@@ -23,7 +23,7 @@ function BossesSearchResults({ searchResults }: BossesSearchResultsProps) {
             <Image
               width={100}
               height={60}
-              src={boss.image ? `${boss.image}` : '/images/default-image.webp'}
+              src={boss.image ? `${boss.image}` : '/images/elden-ring.png'}
               alt={boss.name}
             />
             <p>{boss.name}</p>
