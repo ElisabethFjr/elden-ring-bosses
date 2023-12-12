@@ -2,6 +2,7 @@
 import axiosInstance from '@/utils/axios';
 // Import Components
 import SearchBar from '@/components/SearchBar/SearchBar';
+import SortByMenu from '@/components/SortByMenu/SortByMenu';
 import BossList from '@/components/BossList/BossList';
 // Import Styles
 import styles from './BossesPage.module.scss';
@@ -27,7 +28,10 @@ async function BossesPage() {
         <span className={styles.maj}>g</span>
       </h1>
       <h2 className={styles.subtitle}>Bosses</h2>
-      <SearchBar />
+      <div className={styles.search}>
+        <SearchBar />
+        <SortByMenu />
+      </div>
       <BossList bosses={bosses} />
     </div>
   );
