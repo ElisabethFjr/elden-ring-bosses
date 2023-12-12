@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './SortByMenu.module.scss';
 
 function SortByMenu() {
@@ -23,6 +23,26 @@ function SortByMenu() {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+  useEffect(() => {
+    const handleDocumentClick = (event: MouseEvent) => {
+      if (buttonRef.current && isDropdownOpen) {
+        if (!buttonRef.current.contains(event.target as Node)) {
+          setIsDropdownOpen(false);
+        }
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleDocumentClick);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleDocumentClick);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <div className={styles.wrapper}>
       <button
@@ -31,6 +51,7 @@ function SortByMenu() {
         }`}
         onClick={toggleDropdown}
         type="button"
+        ref={buttonRef}
       >
         Sort By
       </button>
