@@ -1,5 +1,7 @@
 'use client';
 
+'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import styles from './SortByMenu.module.scss';
 
@@ -29,14 +31,18 @@ function SortByMenu({ onSortChange }: SortByMenuProps) {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const btnRef = useRef<HTMLButtonElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleDocumentClick = (event: MouseEvent) => {
-      if (menuRef.current && isDropdownOpen) {
-        if (!menuRef.current.contains(event.target as Node)) {
-          setIsDropdownOpen(false);
-        }
+      if (
+        btnRef.current &&
+        !btnRef.current.contains(event.target as Node) &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
       }
     };
 
@@ -47,7 +53,7 @@ function SortByMenu({ onSortChange }: SortByMenuProps) {
     return () => {
       document.removeEventListener('mousedown', handleDocumentClick);
     };
-  }, [isDropdownOpen]);
+  }, [isDropdownOpen, setIsDropdownOpen]);
 
   return (
     <div className={styles.wrapper}>
@@ -57,6 +63,7 @@ function SortByMenu({ onSortChange }: SortByMenuProps) {
         }`}
         onClick={toggleDropdown}
         type="button"
+        ref={btnRef}
       >
         Sort By
       </button>

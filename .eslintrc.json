@@ -25,6 +25,7 @@
         "tsx": "never"
       }
     ],
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "operator-linebreak": ["error", "after"]
   }
 }
