@@ -3,7 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './SortByMenu.module.scss';
 
-function SortByMenu() {
+interface SortByMenuProps {
+  // eslint-disable-next-line no-unused-vars
+  onSortChange: (optionValue: string) => void;
+}
+
+function SortByMenu({ onSortChange }: SortByMenuProps) {
   const options = [
     { label: 'Name : A-Z', value: 'name.asc' },
     { label: 'Name : Z-A', value: 'name.desc' },
@@ -17,18 +22,19 @@ function SortByMenu() {
   const handleButtonClick = (optionValue: string) => {
     setSelectedOption(optionValue);
     setIsDropdownOpen(false);
+    onSortChange(optionValue);
   };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const handleDocumentClick = (event: MouseEvent) => {
-      if (buttonRef.current && isDropdownOpen) {
-        if (!buttonRef.current.contains(event.target as Node)) {
+      if (menuRef.current && isDropdownOpen) {
+        if (!menuRef.current.contains(event.target as Node)) {
           setIsDropdownOpen(false);
         }
       }
@@ -51,12 +57,11 @@ function SortByMenu() {
         }`}
         onClick={toggleDropdown}
         type="button"
-        ref={buttonRef}
       >
         Sort By
       </button>
       {isDropdownOpen && (
-        <div className={styles.menu}>
+        <div className={styles.menu} ref={menuRef}>
           {options.map((option) => (
             <button
               key={option.value}

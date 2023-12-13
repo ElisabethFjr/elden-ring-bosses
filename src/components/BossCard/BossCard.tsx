@@ -13,11 +13,12 @@ function BossCard({ boss }: BossCardProps) {
       <article className={styles.card}>
         <div className={styles.image}>
           <Image
-            src={boss.image ? `${boss.image}` : '/images/default-image.webp'}
+            src={boss.image ? `${boss.image}` : '/images/elden-ring.png'}
             alt={boss.name}
             width={300}
             height={170}
             style={{ objectFit: 'cover', objectPosition: 'top' }}
+            priority
           />
         </div>
         <div className={styles.content}>

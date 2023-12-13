@@ -1,16 +1,15 @@
 // Import Utils
 import axiosInstance from '@/utils/axios';
-// Import Components
-import SearchBar from '@/components/SearchBar/SearchBar';
-import SortByMenu from '@/components/SortByMenu/SortByMenu';
-import BossList from '@/components/BossList/BossList';
 // Import Styles
 import styles from './BossesPage.module.scss';
+import BossesContainer from '@/components/BossesContainer/BossesContainer';
 
 async function BossesPage() {
   const getAllBosses = async () => {
     try {
-      const { data } = await axiosInstance.get('/bosses?limit=9&page=1');
+      const { data } = await axiosInstance.get('/bosses?limit=100');
+      console.log(data.data);
+
       return data.data;
     } catch (error) {
       console.error('Failed fetching bosses:', error);
@@ -28,11 +27,7 @@ async function BossesPage() {
         <span className={styles.maj}>g</span>
       </h1>
       <h2 className={styles.subtitle}>Bosses</h2>
-      <div className={styles.search}>
-        <SearchBar />
-        <SortByMenu />
-      </div>
-      <BossList bosses={bosses} />
+      <BossesContainer bosses={bosses} />
     </div>
   );
 }
