@@ -1,3 +1,6 @@
+import PageLayout from '@/components/PageLayout/PageLayout';
+import styles from './BossPage.module.scss';
+
 export interface BossPageProps {
   params: {
     id: number;
@@ -6,10 +9,9 @@ export interface BossPageProps {
 
 function BossPage({ params }: BossPageProps) {
   return (
-    <div className="boss">
-      <h1>Boss name</h1>
+    <PageLayout subtitle="Boss">
       <p>{params.id}</p>
-    </div>
+    </PageLayout>
   );
 }
 

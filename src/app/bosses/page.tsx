@@ -1,8 +1,9 @@
 // Import Utils
 import axiosInstance from '@/utils/axios';
-// Import Styles
-import styles from './BossesPage.module.scss';
+// Immport Components
 import BossesContainer from '@/components/BossesContainer/BossesContainer';
+import PageLayout from '@/components/PageLayout/PageLayout';
+// Import Styles
 
 async function BossesPage() {
   const getAllBosses = async () => {
@@ -20,15 +21,9 @@ async function BossesPage() {
   const bosses = await getAllBosses();
 
   return (
-    <div className={styles.bosses}>
-      <h1 className={styles.title}>
-        <span className={styles.maj}>E</span>
-        lden Rin
-        <span className={styles.maj}>g</span>
-      </h1>
-      <h2 className={styles.subtitle}>Bosses</h2>
+    <PageLayout subtitle="Bosses">
       <BossesContainer bosses={bosses} />
-    </div>
+    </PageLayout>
   );
 }
 
