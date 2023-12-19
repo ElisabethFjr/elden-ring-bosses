@@ -1,8 +1,10 @@
+import PageLayout from '@/components/PageLayout/PageLayout';
+
 function AboutPage() {
   return (
-    <div className="about">
-      <h1>About</h1>
-    </div>
+    <PageLayout subtitle="About">
+      <p>A propos du jeu et de moi</p>
+    </PageLayout>
   );
 }
 

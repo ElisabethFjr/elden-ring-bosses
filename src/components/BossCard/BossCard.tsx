@@ -22,7 +22,7 @@ function BossCard({ boss }: BossCardProps) {
           />
         </div>
         <div className={styles.content}>
-          <h2 className={styles.name}>{boss.name}</h2>
+          <h3 className={styles.name}>{boss.name}</h3>
         </div>
         <div className={styles.overlay}>
           <button type="button" className={styles.btn}>

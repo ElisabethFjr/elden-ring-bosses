@@ -9,8 +9,6 @@ async function BossesPage() {
   const getAllBosses = async () => {
     try {
       const { data } = await axiosInstance.get('/bosses?limit=100');
-      console.log(data.data);
-
       return data.data;
     } catch (error) {
       console.error('Failed fetching bosses:', error);
