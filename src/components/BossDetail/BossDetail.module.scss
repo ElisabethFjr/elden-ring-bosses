@@ -1,2 +1,13 @@
 @import 'variables';
 @import 'mixins';
+
+.container {
+  border: 3px solid $colorGold;
+  box-shadow: 0 0 5px rgba($colorGold, 0.5);
+  padding: 0.5rem;
+  .wrapper {
+    border: 1px solid $colorGold;
+    box-shadow: 0 0 5px rgba($colorGold, 0.5);
+    padding: 1rem;
+  }
+}

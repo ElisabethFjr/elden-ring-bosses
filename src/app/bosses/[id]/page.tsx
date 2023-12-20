@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 // Import Navigation
 import { notFound } from 'next/navigation';
 // Import Utils
@@ -33,7 +34,9 @@ async function BossPage({ params }: BossPageProps) {
 
   return (
     <PageLayout subtitle="Boss">
-      <BossDetail boss={boss} />
+      <Suspense fallback={<p>Loading...</p>}>
+        <BossDetail boss={boss} />
+      </Suspense>
     </PageLayout>
   );
 }

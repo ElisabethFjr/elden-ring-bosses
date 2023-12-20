@@ -8,11 +8,13 @@ export interface BossDetailProps {
 function BossDetail({ boss }: BossDetailProps) {
   return (
     <div className={styles.container}>
-      <h3>{boss.name}</h3>
-      <p>Description: </p>
-      <p>Location : </p>
-      <p>HP : </p>
-      <ul>Drops</ul>
+      <div className={styles.wrapper}>
+        <h3 className={styles.name}>{boss.name}</h3>
+        <p className={styles.description}>Description: </p>
+        <p className={styles.Location}>Location : </p>
+        <p className={styles.hp}>HP : </p>
+        <ul className={styles.drops}>Drops</ul>
+      </div>
     </div>
   );
 }
