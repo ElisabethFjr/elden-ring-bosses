@@ -2,6 +2,8 @@
 @import 'mixins';
 
 .container {
+  background-color: $colorCardBackground;
+  backdrop-filter: blur(10px);
   border: 3px solid $colorGold;
   box-shadow: 0 0 5px rgba($colorGold, 0.5);
   padding: 0.5rem;
