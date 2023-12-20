@@ -2,8 +2,7 @@
 
 ## Description
 
-All bosses
-API : https://eldenring.fanapis.com/
+Explore all the bosses in the From Software's video game : Elden Ring. The data is sourced from the Elden Ring API: https://eldenring.fanapis.com/.
 
 ## Technos
 
@@ -11,7 +10,7 @@ API : https://eldenring.fanapis.com/
 
 ## Preview
 
-![Elden Ring Bosses App](public\docs\elden-ring-preview.png)
+![Elden Ring Bosses App](/public/docs/elden-ring-preview.png)
 
 ## How to use ?
 
