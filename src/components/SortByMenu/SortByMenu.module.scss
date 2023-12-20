@@ -1,0 +1,59 @@
+@import 'variables';
+
+.wrapper {
+  position: relative;
+  height: 3rem;
+
+  .toggleButton {
+    cursor: pointer;
+    height: 3rem;
+    width: 200px;
+    background-color: $colorBtnTransparent;
+    border: 1px solid rgba($colorText, 0.5);
+    color: $colorText;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      outline: none;
+      border-color: rgba($colorGold, 0.5);
+    }
+
+    &.dropdownOpen {
+      border: 1px solid $colorGold;
+      box-shadow: 0 0 5px rgba($colorGold, 0.5);
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    background-color: $colorBtnTransparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba($colorGold, 0.5);
+    width: 100%;
+
+    .option {
+      cursor: pointer;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1.1rem;
+      color: $colorText;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $colorText;
+        background-color: rgba($colorGold, 0.5);
+      }
+
+      &.selected {
+        color: $colorGold;
+      }
+    }
+  }
+}

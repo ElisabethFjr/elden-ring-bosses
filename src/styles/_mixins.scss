@@ -1,0 +1,9 @@
+// GOLD LINE
+@mixin goldLine {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.6px;
+  background: linear-gradient(to right, transparent, $colorGold, transparent);
+}

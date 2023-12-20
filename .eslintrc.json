@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "airbnb",
-    "next/core-web-vitals"
-  ],
+  "extends": ["airbnb", "next/core-web-vitals"],
   "parser": "@typescript-eslint/parser",
   "overrides": [
     {
@@ -13,7 +10,10 @@
     }
   ],
   "rules": {
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
     "@next/next/no-img-element": "off",
     "import/extensions": [
       "error",
@@ -24,7 +24,8 @@
         "ts": "never",
         "tsx": "never"
       }
-   ],
-   "react/jsx-props-no-spreading": "off"
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "operator-linebreak": ["error", "after"]
   }
 }
