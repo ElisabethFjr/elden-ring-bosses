@@ -1,0 +1,28 @@
+@import 'variables';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 100%;
+  margin-top: 1rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: $colorCardBackground;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba($colorGold, 0.5);
+    padding: 6rem 3rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
