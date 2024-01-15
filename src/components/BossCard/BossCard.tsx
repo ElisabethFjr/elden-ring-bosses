@@ -9,7 +9,7 @@ export interface BossCardProps {
 
 function BossCard({ boss }: BossCardProps) {
   return (
-    <Link href={`/bosses/${boss.id}`}>
+    <Link href={`/bosses/${boss.id}`} scroll={false}>
       <article className={styles.card}>
         <div className={styles.image}>
           <Image

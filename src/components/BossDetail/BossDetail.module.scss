@@ -8,8 +8,31 @@
   box-shadow: 0 0 5px rgba($colorGold, 0.5);
   padding: 0.5rem;
   .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 316px;
     border: 1px solid $colorGold;
     box-shadow: 0 0 5px rgba($colorGold, 0.5);
     padding: 1rem;
+    font-size: 1.2rem;
+    .name {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+    .drops {
+      ul {
+        padding-left: 1.5rem;
+      }
+      li {
+        list-style: square;
+      }
+    }
+    .color {
+      color: $colorGold;
+      font-weight: bold;
+    }
   }
 }

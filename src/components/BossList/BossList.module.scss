@@ -10,3 +10,19 @@
   width: 100%;
   margin-bottom: 4rem;
 }
+
+/* Responsive Tablet */
+@media (max-width: 1199px) {
+  .list {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
