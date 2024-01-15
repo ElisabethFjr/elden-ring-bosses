@@ -52,3 +52,10 @@
     }
   }
 }
+
+/* Responsive Mobile */
+@media (max-width: 700px) {
+  .searchBar {
+    margin-bottom: 0.5rem;
+  }
+}

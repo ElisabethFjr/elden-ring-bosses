@@ -19,13 +19,13 @@ function BossesContainer({ bosses }: BossesContainerProps) {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.search}>
         <SearchBar />
         <SortByMenu onSortChange={handleSortChange} />
       </div>
       <BossList bosses={bosses} sortBy={sortBy} />
-    </>
+    </div>
   );
 }
 
