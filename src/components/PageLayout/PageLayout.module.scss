@@ -4,11 +4,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  max-width: 1100px;
-  width: 90%;
+  justify-content: center;
+  width: 100%;
   min-height: 100%;
-  margin: 0 auto;
   padding-bottom: 2rem;
 
   .title {
@@ -20,7 +18,7 @@
     text-transform: uppercase;
     color: $colorGold;
     text-shadow: 2px 2px 4px $colorBtnTransparent;
-    &-maj {
+    .maj {
       font-size: 4rem;
     }
   }
@@ -49,6 +47,18 @@
       width: 90px;
       height: 1.6px;
       background: linear-gradient(to left, $colorGold, transparent);
+    }
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 700px) {
+  .layout {
+    .title {
+      font-size: 2.7rem;
+      .maj {
+        font-size: 3.6rem;
+      }
     }
   }
 }
