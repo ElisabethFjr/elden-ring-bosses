@@ -3,15 +3,14 @@
 import { useState } from 'react';
 import BossList from '../BossList/BossList';
 import SearchBar from '../SearchBar/SearchBar';
-import SortByMenu from '../SortByMenu/SortByMenu';
-import { Boss } from '@/@types';
+// import SortByMenu from '../SortByMenu/SortByMenu';
 import styles from './BossesContainer.module.scss';
 
-interface BossesContainerProps {
-  bosses: Boss[];
+interface BossContainerProps {
+  query: string;
 }
 
-function BossesContainer({ bosses }: BossesContainerProps) {
+function BossesContainer({ query }: BossContainerProps) {
   const [sortBy, setSortBy] = useState<string>('name.asc');
 
   const handleSortChange = (sortByValue: string) => {
@@ -22,9 +21,9 @@ function BossesContainer({ bosses }: BossesContainerProps) {
     <div className={styles.container}>
       <div className={styles.search}>
         <SearchBar />
-        <SortByMenu onSortChange={handleSortChange} />
+        {/* <SortByMenu onSortChange={handleSortChange} /> */}
       </div>
-      <BossList bosses={bosses} sortBy={sortBy} />
+      <BossList query={query} sortBy={sortBy} />
     </div>
   );
 }

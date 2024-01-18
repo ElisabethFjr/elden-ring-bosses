@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { nanoid } from 'nanoid';
 import { Boss } from '@/@types';
 import styles from './BossDetail.module.scss';
+import BackButton from '../BackButton/BackButton';
 
 export interface BossDetailProps {
   boss: Boss;

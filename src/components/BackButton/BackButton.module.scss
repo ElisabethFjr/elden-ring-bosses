@@ -1,11 +1,13 @@
 @import 'variables';
 
 .btn {
-  padding: 0.5rem 3rem;
-  border: 1px solid #787771;
+  width: 110px;
+  padding: 0.5rem 0;
+  border: 1px solid $colorGold;
   background-color: rgba(36, 35, 36, 0.6);
-  color: #ccc1b7;
+  color: $colorGold;
   text-transform: uppercase;
+  font-size: 1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {

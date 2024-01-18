@@ -1,33 +1,23 @@
-// Import Utils
-import axiosInstance from '@/utils/axios';
+// Import API fetch
+import { getAllBosses } from '@/api/api';
 // Immport Components
 import BossesContainer from '@/components/BossesContainer/BossesContainer';
 import PageLayout from '@/components/PageLayout/PageLayout';
 // Import Types
 import { Boss } from '@/@types';
 
-async function BossesPage() {
-  const getAllBosses = async () => {
-    try {
-      const { data } = await axiosInstance.get('/bosses?limit=100');
-      return data.data;
-    } catch (error) {
-      console.error('Failed fetching bosses:', error);
-      throw new Error();
-    }
+interface BossesPagesProps {
+  searchParams?: {
+    query?: string;
   };
+}
 
-  const bosses = await getAllBosses();
-  // Filter duplicate bosses
-  const filteredBosses = bosses.filter(
-    (boss: Boss) =>
-      boss.id !== '17f69d0313fl0i1uk8pokynv71bkz8' &&
-      boss.id !== '17f69d4387al0i1ulpqqumwqw05j3c'
-  );
+async function BossesPage({ searchParams }: BossesPagesProps) {
+  const query = searchParams?.query || '';
 
   return (
     <PageLayout subtitle="Bosses">
-      <BossesContainer bosses={filteredBosses} />
+      <BossesContainer query={query} />
     </PageLayout>
   );
 }
