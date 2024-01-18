@@ -1,4 +1,5 @@
 import { Boss } from '@/@types';
+import { log } from 'console';
 import { unstable_noStore as noStore } from 'next/cache';
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -12,13 +13,8 @@ async function getAllBosses() {
       throw new Error(`Failed to fetch bosses: ${response.status}`);
     }
     const data = await response.json();
-    // Filter duplicate bosses
-    const filteredBosses = data.data.filter(
-      (boss: Boss) =>
-        boss.id !== '17f69d0313fl0i1uk8pokynv71bkz8' &&
-        boss.id !== '17f69d4387al0i1ulpqqumwqw05j3c'
-    );
-    return filteredBosses;
+
+    return data.data;
   } catch (error) {
     console.error(error);
     throw new Error('Failed to fetch bosses');
@@ -44,27 +40,25 @@ async function getBossById(bossId: string) {
 }
 
 // Fetch bosses filtered by name
-async function getBossesByName(query: string) {
+async function getFilteredBosses(query: string, page: number, limit: number) {
   noStore();
   try {
-    const response = await fetch(`${apiUrl}/bosses?limit=100?name=${query}`);
+    const response = await fetch(
+      `${apiUrl}/bosses?limit=${limit}&page=${page - 1}&name=${query}`
+    );
     if (!response.ok) {
       throw new Error(
         `Failed to fetch bosses with name ${query}: ${response.status}`
       );
     }
+
     const data = await response.json();
-    // Filter duplicate bosses
-    const filteredBosses = data.data.filter(
-      (boss: Boss) =>
-        boss.id !== '17f69d0313fl0i1uk8pokynv71bkz8' &&
-        boss.id !== '17f69d4387al0i1ulpqqumwqw05j3c'
-    );
-    return filteredBosses;
+
+    return data.data;
   } catch (error) {
     console.error(error);
     throw new Error(`Failed to fetch bosses with name ${query}`);
   }
 }
 
-export { getAllBosses, getBossById, getBossesByName };
+export { getAllBosses, getBossById, getFilteredBosses };

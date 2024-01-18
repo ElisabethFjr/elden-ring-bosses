@@ -1,29 +1,23 @@
-'use client';
-
-import { useState } from 'react';
 import BossList from '../BossList/BossList';
 import SearchBar from '../SearchBar/SearchBar';
-// import SortByMenu from '../SortByMenu/SortByMenu';
 import styles from './BossesContainer.module.scss';
+import Pagination from '../Pagination/Pagination';
 
 interface BossContainerProps {
   query: string;
+  currentPage: number;
 }
 
-function BossesContainer({ query }: BossContainerProps) {
-  const [sortBy, setSortBy] = useState<string>('name.asc');
-
-  const handleSortChange = (sortByValue: string) => {
-    setSortBy(sortByValue);
-  };
-
+function BossesContainer({ query, currentPage }: BossContainerProps) {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
         <SearchBar />
-        {/* <SortByMenu onSortChange={handleSortChange} /> */}
       </div>
-      <BossList query={query} sortBy={sortBy} />
+      <BossList query={query} currentPage={currentPage} />
+      <div className={styles.pagination}>
+        <Pagination />
+      </div>
     </div>
   );
 }

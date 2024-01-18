@@ -14,15 +14,17 @@ export const metadata: Metadata = {
 interface BossesPagesProps {
   searchParams?: {
     query?: string;
+    page?: string;
   };
 }
 
 async function BossesPage({ searchParams }: BossesPagesProps) {
   const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
 
   return (
     <PageLayout subtitle="Bosses">
-      <BossesContainer query={query} />
+      <BossesContainer query={query} currentPage={currentPage} />
     </PageLayout>
   );
 }

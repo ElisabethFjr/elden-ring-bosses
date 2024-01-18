@@ -23,6 +23,8 @@ function SearchBar() {
   const searchBosses = useDebouncedCallback((term) => {
     const params = new URLSearchParams(searchParams);
 
+    // Reset page number to 1
+    params.set('page', '1');
     if (term) {
       params.set('query', term);
     } else {
