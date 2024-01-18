@@ -1,6 +1,5 @@
 import React from 'react';
 import type { Metadata } from 'next';
-// eslint-disable-next-line camelcase
 import { EB_Garamond } from 'next/font/google';
 
 // Import Components
@@ -14,7 +13,10 @@ import '../styles/globals.scss';
 const EBGaramond = EB_Garamond({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Elden Ring Bosses',
+  title: {
+    template: 'Elden Ring Bosses | %s',
+    default: 'Acme Dashboard',
+  },
   description: 'All bosses from the Elden Ring Video Game. NextJs Application.',
   keywords: 'Elden Ring, From Software, Boss, Bosses, NextJs, React',
 };

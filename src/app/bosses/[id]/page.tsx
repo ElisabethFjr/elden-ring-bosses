@@ -9,11 +9,19 @@ import PageLayout from '@/components/PageLayout/PageLayout';
 import BossDetail from '@/components/BossDetail/BossDetail';
 import BackButton from '@/components/BackButton/BackButton';
 
-export const dynamic = 'force-static';
-
 export interface BossPageProps {
   params: {
     id: string;
+  };
+}
+
+export async function generateMetadata({ params }: BossPageProps) {
+  console.log(params);
+  const boss = await getBossById(params.id);
+  console.log(boss.name);
+
+  return {
+    title: boss.name,
   };
 }
 

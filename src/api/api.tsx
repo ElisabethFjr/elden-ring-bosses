@@ -1,8 +1,11 @@
 import { Boss } from '@/@types';
+import { unstable_noStore as noStore } from 'next/cache';
+
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 // Fetch All Bosses
 async function getAllBosses() {
+  noStore();
   try {
     const response = await fetch(`${apiUrl}/bosses?limit=100`);
     if (!response.ok) {
@@ -24,6 +27,7 @@ async function getAllBosses() {
 
 // Fetch A Boss with his id
 async function getBossById(bossId: string) {
+  noStore();
   try {
     const response = await fetch(`${apiUrl}/bosses/${bossId}`);
     if (!response.ok) {
@@ -41,6 +45,7 @@ async function getBossById(bossId: string) {
 
 // Fetch bosses filtered by name
 async function getBossesByName(query: string) {
+  noStore();
   try {
     const response = await fetch(`${apiUrl}/bosses?limit=100?name=${query}`);
     if (!response.ok) {
