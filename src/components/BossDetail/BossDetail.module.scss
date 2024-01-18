@@ -7,6 +7,7 @@
   border: 3px solid $colorGold;
   box-shadow: 0 0 5px rgba($colorGold, 0.5);
   padding: 0.5rem;
+  margin-bottom: 2rem;
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -14,15 +15,17 @@
     width: 316px;
     border: 1px solid $colorGold;
     box-shadow: 0 0 5px rgba($colorGold, 0.5);
-    padding: 1rem;
+    padding: 0 1rem;
     font-size: 1.2rem;
     .name {
+      padding: 1rem;
       text-align: center;
       text-transform: uppercase;
       font-weight: 500;
       font-size: 1.5rem;
     }
     .drops {
+      padding-bottom: 2rem;
       ul {
         padding-left: 1.5rem;
       }

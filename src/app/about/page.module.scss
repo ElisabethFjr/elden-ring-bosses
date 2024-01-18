@@ -8,6 +8,7 @@
   width: 90%;
   height: 100%;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 
   .wrapper {
     display: flex;
@@ -17,7 +18,7 @@
     background-color: $colorCardBackground;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 5px rgba($colorGold, 0.5);
-    padding: 6rem 3rem;
+    padding: 5rem 3rem;
 
     h2 {
       font-size: 1.5rem;

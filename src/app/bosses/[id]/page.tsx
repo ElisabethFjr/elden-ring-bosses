@@ -1,13 +1,13 @@
+// Import API fetch
+import { getBossById } from '@/api/api';
+// Import Suspense
 import { Suspense } from 'react';
 // Import Navigation
 import { notFound } from 'next/navigation';
-// Import Utils
-import axiosInstance from '@/utils/axios';
 // Import Components
 import PageLayout from '@/components/PageLayout/PageLayout';
 import BossDetail from '@/components/BossDetail/BossDetail';
-
-export const dynamic = 'force-static';
+import BackButton from '@/components/BackButton/BackButton';
 
 export interface BossPageProps {
   params: {
@@ -15,18 +15,18 @@ export interface BossPageProps {
   };
 }
 
-async function BossPage({ params }: BossPageProps) {
-  const getBossInfos = async () => {
-    try {
-      const { data } = await axiosInstance.get(`/bosses/${params.id}`);
-      return data.data;
-    } catch (error) {
-      console.error('Failed fetching bosses:', error);
-      throw new Error();
-    }
-  };
+export async function generateMetadata({ params }: BossPageProps) {
+  console.log(params);
+  const boss = await getBossById(params.id);
+  console.log(boss.name);
 
-  const boss = await getBossInfos();
+  return {
+    title: boss.name,
+  };
+}
+
+async function BossPage({ params }: BossPageProps) {
+  const boss = await getBossById(params.id);
 
   if (!boss.id) {
     return notFound();
@@ -36,6 +36,7 @@ async function BossPage({ params }: BossPageProps) {
     <PageLayout subtitle="Boss">
       <Suspense fallback={<p>Loading...</p>}>
         <BossDetail boss={boss} />
+        <BackButton />
       </Suspense>
     </PageLayout>
   );

@@ -1,5 +1,6 @@
 import PageLayout from '@/components/PageLayout/PageLayout';
 import styles from './page.module.scss';
+import BackButton from '@/components/BackButton/BackButton';
 
 function AboutPage() {
   return (
@@ -26,6 +27,7 @@ function AboutPage() {
           </p>
         </div>
       </div>
+      <BackButton />
     </PageLayout>
   );
 }

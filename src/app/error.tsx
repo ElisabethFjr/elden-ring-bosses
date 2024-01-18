@@ -11,7 +11,7 @@ function Error({ reset }: ErrorProps) {
       <p className="error-text">
         Whooops, an error has occurred. Please try again.
       </p>
-      <button type="button" onClick={() => reset()}>
+      <button className="error-btn" type="button" onClick={() => reset()}>
         Try again
       </button>
     </div>

@@ -82,4 +82,23 @@ button {
     padding-bottom: 1rem;
     text-align: center;
   }
+
+  &-btn {
+    width: 130px;
+    padding: 0.5rem 0;
+    border: 1px solid $colorGold;
+    background-color: rgba(36, 35, 36, 0.6);
+    color: $colorGold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow:
+        0 0 18px 0 rgba(170, 149, 110, 0.5),
+        0 0 9px 3px rgba(170, 149, 110, 0.2);
+      border: 1px solid $colorGold;
+      color: $colorGold;
+    }
+  }
 }
