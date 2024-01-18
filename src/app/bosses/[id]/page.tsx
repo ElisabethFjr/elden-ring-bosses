@@ -16,9 +16,7 @@ export interface BossPageProps {
 }
 
 export async function generateMetadata({ params }: BossPageProps) {
-  console.log(params);
   const boss = await getBossById(params.id);
-  console.log(boss.name);
 
   return {
     title: boss.name,

@@ -11,6 +11,11 @@
     gap: 0.5rem;
     width: 100%;
   }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Responsive Mobile */

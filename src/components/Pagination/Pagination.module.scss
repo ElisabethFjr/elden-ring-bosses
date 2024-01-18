@@ -1,0 +1,49 @@
+@import 'variables';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    margin: 0 0.5rem;
+    border: 1px solid $colorBorder;
+    background-color: $colorBtnTransparent;
+    color: $colorText;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow:
+        0 0 18px 0 rgba(170, 149, 110, 0.5),
+        0 0 9px 3px rgba(170, 149, 110, 0.2);
+      border: 1px solid $colorGold;
+      color: $colorGold;
+    }
+  }
+
+  .currentPage {
+    box-shadow:
+      0 0 18px 0 rgba(170, 149, 110, 0.5),
+      0 0 9px 3px rgba(170, 149, 110, 0.2);
+    border: 1px solid $colorGold;
+    color: $colorGold;
+  }
+
+  .ellipsis {
+    cursor: default;
+    border: none;
+    background-color: transparent;
+    &:hover {
+      box-shadow: none;
+      border: none;
+      color: none;
+    }
+  }
+}
