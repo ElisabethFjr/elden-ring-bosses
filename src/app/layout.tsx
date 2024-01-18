@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   description: 'All bosses from the Elden Ring Video Game. NextJs Application.',
   keywords: 'Elden Ring, From Software, Boss, Bosses, NextJs, React',
+  metadataBase: new URL('https://elden-ring-bosses-nine.vercel.app'),
 };
 
 export default function RootLayout({
