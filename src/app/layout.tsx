@@ -15,7 +15,7 @@ const EBGaramond = EB_Garamond({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: {
     template: 'Elden Ring Bosses | %s',
-    default: 'Acme Dashboard',
+    default: 'Elden Ring Bosses',
   },
   description: 'All bosses from the Elden Ring Video Game. NextJs Application.',
   keywords: 'Elden Ring, From Software, Boss, Bosses, NextJs, React',

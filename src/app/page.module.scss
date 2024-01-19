@@ -30,6 +30,25 @@
     font-weight: 400;
     text-shadow: 2px 2px 4px $colorBtnTransparent;
   }
+
+  .link {
+    width: 170px;
+    padding: 0.5rem 0;
+    border: 1px solid $colorBorder;
+    background-color: c;
+    color: $colorText;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow:
+        0 0 18px 0 rgba(170, 149, 110, 0.5),
+        0 0 9px 3px rgba(170, 149, 110, 0.2);
+      border: 1px solid $colorGold;
+      color: $colorGold;
+    }
+  }
 }
 
 /* Responsive Mobile */

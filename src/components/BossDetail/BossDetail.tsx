@@ -14,7 +14,7 @@ function BossDetail({ boss }: BossDetailProps) {
       <div className={styles.wrapper}>
         <h3 className={styles.name}>{boss.name}</h3>
         <Image
-          src={boss.image ? `${boss.image}` : '/images/elden-ring.png'}
+          src={boss.image ? `${boss.image}` : '/images/elden-ring.webp'}
           alt={boss.name}
           width={300}
           height={170}
