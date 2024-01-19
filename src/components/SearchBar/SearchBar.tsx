@@ -41,7 +41,11 @@ function SearchBar() {
 
   return (
     <form className={styles.searchBar}>
+      <label htmlFor="searchInput" className={styles.label}>
+        Search
+      </label>
       <input
+        id="searchInput"
         className={styles.input}
         minLength={2}
         onChange={handleChange}
@@ -49,7 +53,12 @@ function SearchBar() {
         onBlurCapture={() => setHasFocus(false)}
         onFocus={() => setHasFocus(true)}
       />
-      <button className={styles.btn} type="button">
+      <button
+        className={styles.btn}
+        type="button"
+        aria-label="Search"
+        title="Search"
+      >
         <FontAwesomeIcon className={styles.icon} icon={faMagnifyingGlass} />
       </button>
     </form>

@@ -1,5 +1,5 @@
-// Import Components
-import Button from '@/components/Button/Button';
+// Import Next Components
+import Link from 'next/link';
 // Import Styles
 import styles from './page.module.scss';
 
@@ -15,7 +15,9 @@ async function Home() {
         Journey through the Lands Between and discover all bosses from the
         renowned FromSoftware&apos;s video game.
       </h2>
-      <Button text="All Bosses" href="/bosses" />
+      <Link href="/bosses" className={styles.link}>
+        All Bosses
+      </Link>
     </div>
   );
 }

@@ -7,7 +7,7 @@ function AboutPage() {
     <PageLayout subtitle="About">
       <div className={styles.container}>
         <div className={styles.wrapper}>
-          <h2>Hello there, I&apos;m Elisabeth FAUJOUR.</h2>
+          <h3>Hello there, I&apos;m Elisabeth FAUJOUR.</h3>
           <p>
             I&apos;m a passionate web developer who recently started my journey
             in the world of web development. To upgrade my skills with Next.js,
