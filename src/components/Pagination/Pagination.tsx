@@ -5,7 +5,11 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import styles from './Pagination.module.scss';
 
-function Pagination() {
+interface PaginationProps {
+  totalBosses: number;
+}
+
+function Pagination({ totalBosses }: PaginationProps) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get('page')) || 1;
@@ -36,7 +40,10 @@ function Pagination() {
     return [1, '...', page - 1, page, page + 1, '...', totalPages];
   };
 
-  const allPages = generatePagination(currentPage, 18);
+  // Get the number of Pages base on the number of bosses found
+  const totalPages = Math.ceil(totalBosses / 6);
+  // Generate Pages
+  const allPages = generatePagination(currentPage, totalPages);
 
   return (
     <div className={styles.pagination}>
