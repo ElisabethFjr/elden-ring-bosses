@@ -2,7 +2,7 @@
 
 ## Description
 
-Explore all the bosses in the From Software's video game : Elden Ring. The data is sourced from the Elden Ring API: https://eldenring.fanapis.com/.
+Explore all the bosses in the From Software's video game : Elden Ring. The data is sourced from the Elden Ring open source API: https://eldenring.fanapis.com/.
 
 ## Link 
 
