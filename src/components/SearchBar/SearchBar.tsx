@@ -21,7 +21,7 @@ function SearchBar() {
   const { replace } = useRouter();
 
   const searchBosses = useDebouncedCallback((term) => {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams.toString());
 
     // Reset page number to 1
     params.set('page', '1');
